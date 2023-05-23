@@ -1,0 +1,595 @@
+### Welcome to the intro session of CVIT Workshop ✌✌
+
+Today we shall play around with multiple python modules that shall help you enormously in your research.
+
+Today's Goals:
+- Have Fun.
+- Learn exciting new stuff.
+
+print("hello")
+
+
+
+a = 3
+print(a)
+
+print(a)
+
+### Lets Start with Jupyter Notebook features:
+
+## Why notebooks ? 
+1. Data Visualisation
+2. Live Interactions With Code
+
+**Much better to experiment with as compared to standard python files**
+
+Also helps you provide in-place explanations and cues for the future you.
+
+*~~You: Explanation.. Pfff.. Its all in my brain~~*
+
+---
+
+One Month Later:
+
+![Meme]( https://preview.redd.it/i8ztyo3pznk11.jpg?auto=webp&v=enabled&s=71e01e208937f491b6049bac08bad535cdccbbc3 "Random Image")
+
+Code:
+```python
+print("In reality images of results would be highly helpful not memes")
+```
+
+Also I hope this session isn't too $$\frac{ds^3}{dt^3}-y..$$
+
+
+
+
+**In adition to all of the cool Markdown features above, surprisingly we can also code \(Python) and view results in Jupyter Notebooks.**
+
+**So lets begin with learning/brushing up your basic Python skills..**
+
+P.S: The document has a few tasks and its solution hidden below. If you know how to already do it, it doesn't hurt to oil up the machine, otherwise, feel free to un-hide the solution cell and perform the same activity by yourself.
+
+**Lets start with the most essential skill of commenting.**
+
+
+
+# hello
+
+Solution:
+
+#@title
+
+# Single line comments start with a number symbol.
+
+""" Multiline strings can be written
+    using three "s, and are often used
+    as documentation.
+"""
+
+**Do the following:**
+
+1. Initialise an integer, float,a boolen value string.
+2. Initialise a string and perform string concatenation
+3. Placeholder for string manipulation.
+4. Printing
+5. Take an input
+
+a = 3
+b = 3.
+c = True
+print(a)
+print(b)
+print(c)
+
+s1 = "akshat"
+s2 = "yeah"
+concat = s1 + s2
+print(concat)
+
+d = f"{s1}s1"
+print(d)
+
+arr = [int(i) for i in input().split()]
+print(arr)
+
+Solution:
+
+#@title
+### 1 ###
+a = 1
+b = 2.0
+c = True
+
+### 2 ###
+rand_str = "Hi"
+rand_str1 = rand_str + "-fi"
+print(rand_str)
+
+### 3 ###
+d = f"{rand_str} system"
+print(d)
+
+### 4 ###'
+print(a,b,c,d)
+
+### 5 ####
+name = input("Hi.. You are?")
+print(f"Hi {name}..")
+
+Play with `lists`:
+1. Initialise a list
+2. Add elements to a list
+3. Add a list to another list
+4. Access an element of the list
+5. Perform few range tricks (using slices).
+
+list1 = [1 ,2, 7, 4]
+
+list1.append(5)
+print(list1)
+
+list2 = [6, 7]
+list2.extend(list1)
+print(list2)
+
+print(list1[0])
+
+print(list1[1::3])
+
+*Solution:*
+
+#@title
+### 1 ###
+li3 = []
+li1 = [1,2,3]
+li2 = ["a","b","c"]
+
+### 2 ###
+li2.append("d")
+print(li2)
+
+### 3 ###
+li3 = li1 + li2 ### Surprise!! Python doesn't have a type for a list. Anything can be added
+print(li3)
+
+### 4 ###
+print(li3[3])
+
+### 5 ###
+# You can look at ranges with slice syntax.
+# The start index is included, the end index is not
+# (It's a closed/open range for you mathy types.)
+print(li3[1:3] )  # Return list from index 1 to 3 => [2, 4]
+print(li3[2:]  )  # Return list starting from index 2 => [4, 3]
+print(li3[:3]  )  # Return list from beginning until index 3  => [1, 2, 4]
+print(li3[::2] )  # Return list selecting every second entry => [1, 4]
+print(li3[::-1])  # Return list in reverse order => [3, 4, 2, 1]
+# Use any combination of these to make advanced slices
+
+
+
+
+
+
+Play with `Tuples`: \\
+Note that Tuples are immutable i.e once initialised it can be reassigned but not changed. 
+1. Initialise a tuple
+2. Access an element of the tuple
+3. Length of Tuple (Same for length of List)
+
+Iteration tricks are the same as seen in lists.
+
+
+tup = (4, 1, 2, 3)
+print(tup)
+
+print(tup[2])
+
+print(len(tup))
+
+**Solution:**
+
+#@title
+### 1 ###
+tup = (1,2,3)
+
+#### This gives an error because tuples are immutable #####
+# tup[1] = 1
+
+### 2 ###
+print(tup[0])
+
+### 3 ###
+print(len(tup))
+
+
+Play with `Dicts`: \\
+(Dictionaries are maps that have immutable type variables as keys)
+
+1. Initialise a dictionary
+2. Look up the value for a key
+3. Check if key is in dictionary
+4. List all keys of a dictionary
+5. List all values of a dictionary
+
+d = {
+    "a": 120,
+    "b": "haha",
+}
+print(d)
+print(type(d))
+
+print(d["a"])
+
+if "a" in d:
+  print("yes")
+else:
+  print("no")
+
+print(d.keys())
+
+print(d.values())
+
+**Solution:**
+
+#@title
+### 1 ###
+dic = {"one":1,"two":2,"three":3} ## {} empty dict
+
+### 2 ###
+print(dic["one"])
+
+### 3 ###
+print("one" in dic)
+print("four" in dic)
+
+### 4 ###
+print(list(dic.keys()))
+
+### 5 ###
+print(list(dic.values()))
+
+Control Flows and Iterables
+
+1. Create an if statement
+2. print numbers from 3 to 10 without an explicit for in steps of 2.
+3. for loop
+4. while loop
+
+**Soluton:**
+
+#@title
+### 1 ###
+
+# Let's just make a variable
+some_var = 5
+
+# Here is an if statement. Indentation is significant in Python!
+# This prints "some_var is smaller than 10"
+if some_var > 10:
+    print("some_var is totally bigger than 10.")
+elif some_var < 10:    # This elif clause is optional.
+    print("some_var is smaller than 10.")
+else:                  # This is optional too.
+    print("some_var is indeed 10.")
+
+
+### 2 ###
+""" range(lower, upper, step) returns an iterable of numbers
+from the lower number to the upper number, while incrementing
+by step. If step is not indicated, the default value is 1.
+prints:
+    3 5 7 9
+"""
+print(list(range(3,11,2)))
+
+### 3 ###
+
+"""
+For loops iterate over lists
+prints:
+    dog is a mammal
+    cat is a mammal
+    mouse is a mammal
+"""
+for animal in ["dog", "cat", "mouse"]:
+    # You can use format() to interpolate formatted strings
+    print(f"{animal} is a mammal")
+
+for i in range(4, 8, 2):
+    print(i)
+
+
+### 4 ###
+
+"""
+While loops go until a condition is no longer met.
+prints:
+    0
+    1
+    2
+    3
+"""
+x = 0
+while x < 4:
+    print(x)
+    x += 1  # Shorthand for x = x + 1
+
+
+
+
+
+`Functions`:
+
+1. Define a small function and returns a single variable.
+
+2. Define a small function that returns multiple variables.
+
+**Solution:**
+
+#@title
+### 1 ###
+
+# Use "def" to create new functions
+def add(x, y):
+    print(f"x is {x} and y is {y}")
+    return x + y  # Return values with a return statement
+
+# Calling functions with parameters
+print(add(5, 6))  # => prints out "x is 5 and y is 6" and returns 11
+
+# Another way to call functions is with keyword arguments
+print(add(y=6, x=5))  # Keyword arguments can arrive in any order.
+
+### 2 ###
+
+def all_ops(x,y):
+  return x+y,x-y,x*y,x/y,[x^y,x&y,x|y]
+
+print(all_ops(5,6))
+
+
+`File Operations`:
+
+1. Write to File
+2. Read from File
+
+
+
+**Solution:**
+
+#@title
+### 1 ###
+st = "Hello everyone. \nWelcome to CVIT."
+with open("myfile1.txt", "w+") as file:
+    file.write(st)        # writes a string to a file
+
+### 2 ###
+with open("myfile1.txt", "r") as file:
+  b = file.readlines()
+print(b)
+
+### Problem 1
+
+Given a list of binary strings `numbers`. Define a function that takes the first `k` strings and concats their parity into a string `encoding` and returns it.
+
+a = [x for x in input().split()]
+print(a)
+k = int(input("k: "))
+b = a[0:k]
+encoding = ""
+for i in b:
+  c = 0
+  cnt = 0
+  for j in i:
+    if j == '1':
+      cnt = cnt + 1
+  encoding = encoding + str(cnt%2)
+
+print(encoding)
+
+
+**Solution**:
+
+#@title
+def get_encoding(numbers,k):
+  encoding = ""
+  for index in range(k):
+    parity = 0
+    for digit in numbers[index]:
+        parity ^= int(digit)
+    encoding += str(parity)
+  return encoding
+
+### Less go Numpyyy !!!!
+
+Advantages of Numpy:
+
+- One of the fundamental packages for scientific computing in Python.
+- It is a Python library that provides a multidimensional array object.
+- Also provides an assortment of pre-implemented routines/functions for:
+    - Fast mathematical and logical operations on arrays
+    - Shape manipulation
+    - Sorting
+    - Discrete Fourier transforms
+    - Basic linear algebra and basic statistical operations
+
+
+import numpy as np
+
+## !pip install numpy --- Needs to be done for other uncommon modules
+
+arr = np.array([1, 2, 3, 4, 5, 6])
+a = np.array([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]])
+print(a)
+
+Few Easy Tasks:
+1. Print the shape of an array.
+2. Find the sum, max, min and mean of a 1-dimensional array.
+3. Find the mean of each row of a 2-dimensional array.
+4. Given a 2 dimensional array, generate an array that consists of indices of maximum element along each row.
+5. Generate an numpy array with elements uniformly distributed between start and an end interval.
+6. Generate a random 4*4 array and reshape it into an array of shape [2,2,2,2]
+
+
+print(a.shape)
+print(arr.mean())
+print(arr.max())
+print(arr.min())
+print(arr.sum())
+means = [i.mean() for i in a]
+print(means)
+maxs = [i.max() for i in a]
+print(maxs)
+# start at 2 and end at 9
+c = np.arange(2, 9)
+print(c)
+a = np.random.rand(4, 4)
+print(a)
+a.reshape(2, 2, 2,2)
+
+**Solution:**
+
+#@title
+# Print the shape of an array
+arr = np.array([1, 2, 3, 4, 5])
+print(arr.shape)
+
+# Find the sum, max, min, and mean of a 1-dimensional array
+arr = np.array([1, 2, 3, 4, 5])
+print("Sum:", np.sum(arr))
+print("Max:", np.max(arr))
+print("Min:", np.min(arr))
+print("Mean:", np.mean(arr))
+
+# Find the mean of each row of a 2-dimensional array
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+mean_row = np.mean(arr, axis=1)
+print(mean_row)
+
+# Given a 2-dimensional array, generate an array that consists of indices of the maximum element along each row
+arr = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+max_indices = np.argmax(arr, axis=1)
+print(max_indices)
+
+# Generate a NumPy array with elements uniformly distributed between a start and end interval
+start = 0
+end = 10
+size = 5
+uniform_arr = np.random.uniform(start, end, size)
+print(uniform_arr)
+
+# Generate a random 4x4 array and reshape it into an array of shape [2, 2, 2, 2]
+random_arr = np.random.rand(4, 4)
+reshaped_arr = random_arr.reshape(2, 2, 2, 2)
+print(reshaped_arr)
+
+### Images..
+
+
+1. Explore and find out how to read 4 images and plot them in a 2*2 matplotlib figure.
+
+import cv2
+import matplotlib.pyplot as plt
+import numpy as np
+%matplotlib inline
+
+**Solution**
+
+#@title
+images = []
+for i in range(1,5):
+  images.append(cv2.imread(f'/content/images/dip{i}.png'))
+  # print(images[i - 1].shape)
+
+# print(images[3])
+fig,axs = plt.subplots(2,2)
+for i in range(2):
+  for j in range(2):
+    axs[i,j].imshow(images[i+2*j])
+
+2. Do you notice something off in the images displayed? Explore to find the reason and correct the same.
+
+
+
+**Solution:**
+
+for i in range(4):
+  images[i] = cv2.cvtColor(images[i],cv2.COLOR_BGR2RGB)
+
+# print(images[3])
+fig,axs = plt.subplots(2,2)
+for i in range(2):
+  for j in range(2):
+    axs[i,j].imshow(images[i+2*j])
+
+3. Convert the image into grayscale.
+ What do you make of the below picture? Does it make any difference to the way we grayscale things?
+
+![Meme]( https://i.stack.imgur.com/qJxws.png "Random Image")
+
+
+
+**Solution:**
+
+#@title
+## Mean gray conversion
+img3 = cv2.imread(f'drive/MyDrive/images/leaf.jpg')
+img3_gray = img3[:,:,0]/3 + img3[:,:,1]/3 + img3[:,:,2]/3
+img3_gray = img3_gray.astype(np.int32).clip(0,255)
+fig,axs = plt.subplots()
+axs.imshow(img3_gray,cmap='gray')
+
+## Not great due to eyes different reaction to RGB
+fig1,axs1 = plt.subplots()
+img3_gray_mod = img3[:,:,0]*0.299 + img3[:,:,1]*0.587 + img3[:,:,2]*0.114
+img3_gray_mod = img3_gray.astype(np.int32).clip(0,255)
+axs1.imshow(img3_gray_mod,cmap='gray')
+plt.show()
+
+**Construct a frequency histogram for bell.jpg, and plot the histogram using plt.bar (search on google for syntax)**
+
+
+
+**Perform thresholding on bell.jpg using the above constructed histogram.**
+
+
+
+**Do a simple thresholding on the image sudoku.jpg, and find an apt threshold for the same using the above method.** 
+
+
+
+**Plot the RGB histograms for the image lotus.jpg using inbuilt 
+functions. (Look up cv2.calcHist)**
+
+
+
+
+
+**Perform thresholding on fingerprint.jpg and find the threshold.** 
+
+
+
+
+
+**Challenge: Try chroma keying of images as a homework. Take fg.jpg foreground image and put it on bg.jpg.**
+
+from google.colab.patches import cv2_imshow
+
+fg = cv2.imread('/content/fg.jpg')
+img = cv2.imread('/content/bg.jpg')
+borders = []
+for i in range(fg.shape[0]):
+  for j in range(fg.shape[1]):
+    if fg[i][j] != fg[i - 1][j - 1] and i > 1:
+      val1 = i
+  for j in range(i.reverse.shape[0]):
+    if fg[i][j] != fg[i + 1][j - 1] and i < len(fg[i]):
+      val2 = i
+  borders[i] = [val1, val2]
+
+for i in range(fg.shape[0]):
+  for j in range(borders[0], borders[1]):
+    img[i][j] = fg[i][j]
+  
+cv2_imshow(img)
